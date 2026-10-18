@@ -54,10 +54,7 @@ public:
 	FName ItemID;
 
 	UPROPERTY(EditAnywhere)
-	UStaticMeshComponent* MyMesh;
-
-	UFUNCTION()
-	void OnBeginOverLap(UPrimitiveComponent*);
+	UStaticMeshComponent* MyMesh = nullptr;
 
 protected:
 	// Called when the game starts or when spawned
