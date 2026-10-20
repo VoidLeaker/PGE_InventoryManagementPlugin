@@ -5,4 +5,4 @@
 APGE_InventoryPluginGameMode::APGE_InventoryPluginGameMode()
 {
 	// stub
-}
+} 
