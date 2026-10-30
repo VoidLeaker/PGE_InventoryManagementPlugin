@@ -10,6 +10,18 @@
 
 
 USTRUCT(BlueprintType)
+struct FInventorySlot
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory", meta = (ToolTip = "The ID used to identify the item."))
+	FName ItemID = NAME_None;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory", meta = (ToolTip = "The quantity of a specific item."))
+	int32 InventoryQuantity = 0;
+};
+
+USTRUCT(BlueprintType)
 struct FItemData : public FTableRowBase
 {
 	GENERATED_BODY()

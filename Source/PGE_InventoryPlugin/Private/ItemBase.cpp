@@ -2,6 +2,8 @@
 
 
 #include "ItemBase.h"
+#include "PGE_InventoryComponent.h"
+
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -27,6 +29,15 @@ void AItemBase::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 	AActor* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	if (OtherActor != PlayerPawn)
 		return;
+
+	UPGE_InventoryComponent* InventoryComponent = PlayerPawn->FindComponentByClass<UPGE_InventoryComponent>();
+	if (InventoryComponent)
+	{
+		if (InventoryComponent->AddItemToInventory(ItemID, 1))
+		{
+			Destroy();
+		}
+	}
 
 }
 
