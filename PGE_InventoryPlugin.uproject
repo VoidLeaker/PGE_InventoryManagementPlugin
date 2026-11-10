@@ -1,35 +1,38 @@
 {
-	"FileVersion": 3,
-	"EngineAssociation": "{AF67C93D-48DE-D32F-ED5F-0EBE0FC412FC}",
-	"Category": "",
-	"Description": "",
-	"Modules": [
-		{
-			"Name": "PGE_InventoryPlugin",
-			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine",
-				"AIModule",
-				"UMG"
-			]
-		}
-	],
-	"Plugins": [
-		{
-			"Name": "ModelingToolsEditorMode",
-			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
-			]
-		},
-		{
-			"Name": "StateTree",
-			"Enabled": true
-		},
-		{
-			"Name": "GameplayStateTree",
-			"Enabled": true
-		}
-	]
+  "FileVersion": 3,
+  "EngineAssociation": "{BA9A68ED-4EE8-2C6F-DE00-5EB994333740}",
+  "Category": "",
+  "Description": "",
+  "Modules": [
+    {
+      "Name": "PGE_InventoryPlugin",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "ModelingToolsEditorMode",
+      "Enabled": true
+    },
+    {
+      "Name": "StateTree",
+      "Enabled": true
+    },
+    {
+      "Name": "GameplayStateTree",
+      "Enabled": true
+    },
+    {
+      "Name": "VisualStudioTools",
+      "Enabled": true,
+      "SupportedTargetPlatforms": [
+        "Win64"
+      ]
+    }
+  ],
+  "TargetPlatforms": [],
+  "AdditionalRootDirectories": [],
+  "AdditionalPluginDirectories": [],
+  "EpicSampleNameHash": ""
 }

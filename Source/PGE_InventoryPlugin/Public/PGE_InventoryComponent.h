@@ -36,9 +36,6 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UPROPERTY(BlueprintAssignable, Category = "Inventory", meta = (ToolTip = "Updates the inventory"))
-	FOnPGEInventoryUpdated OnInventoryUpdated;
-
 	UFUNCTION(BlueprintCallable, Category = "Inventory", meta = (ToolTip = "Adds an item to the inventory"))
 	bool AddItemToInventory(FName ItemName, int32 Quantity = 1);
 

@@ -24,11 +24,40 @@ void UPGE_InventoryComponent::BeginPlay()
 }
 
 
+void UPGE_InventoryComponent::MergeInventoryArrays(TArray<FInventorySlot>& InSlots)
+{
+}
+
 // Called every frame
 void UPGE_InventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+}
+
+bool UPGE_InventoryComponent::AddItemToInventory(FName ItemName, int32 Quantity)
+{
+	return false;
+}
+
+bool UPGE_InventoryComponent::RemoveItemFromInventory(FName ItemName, int32 Quantity)
+{
+	return false;
+}
+
+bool UPGE_InventoryComponent::GetItemData(FName ItemName, FInventorySlot& OutItemData) const
+{
+	return false;
+}
+
+float UPGE_InventoryComponent::GetCurrentWeight() const
+{
+	return 0.0f;
+}
+
+bool UPGE_InventoryComponent::DropItem(FName ItemName)
+{
+	return false;
 }
 
