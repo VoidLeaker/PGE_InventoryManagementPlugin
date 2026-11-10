@@ -25,19 +25,6 @@ public class PGE_InventoryPlugin : ModuleRules
 
 		PublicIncludePaths.AddRange(new string[] {
 			"PGE_InventoryPlugin",
-			"PGE_InventoryPlugin/Variant_Platforming",
-			"PGE_InventoryPlugin/Variant_Platforming/Animation",
-			"PGE_InventoryPlugin/Variant_Combat",
-			"PGE_InventoryPlugin/Variant_Combat/AI",
-			"PGE_InventoryPlugin/Variant_Combat/Animation",
-			"PGE_InventoryPlugin/Variant_Combat/Gameplay",
-			"PGE_InventoryPlugin/Variant_Combat/Interfaces",
-			"PGE_InventoryPlugin/Variant_Combat/UI",
-			"PGE_InventoryPlugin/Variant_SideScrolling",
-			"PGE_InventoryPlugin/Variant_SideScrolling/AI",
-			"PGE_InventoryPlugin/Variant_SideScrolling/Gameplay",
-			"PGE_InventoryPlugin/Variant_SideScrolling/Interfaces",
-			"PGE_InventoryPlugin/Variant_SideScrolling/UI"
 		});
 
 		// Uncomment if you are using Slate UI
