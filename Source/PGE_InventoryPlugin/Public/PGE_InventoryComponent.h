@@ -30,7 +30,7 @@ protected:
 	TArray<FInventorySlot> InventorySlots;
 
 	UFUNCTION()
-	void MergeInventoryArrays(TArray<FInventorySlot>& InSlots);
+	void MergeInventoryArrays(TArray<FInventorySlot>& InSlots, int32 Left, int32 Centre, int32 Right);
 
 public:	
 	// Called every frame
