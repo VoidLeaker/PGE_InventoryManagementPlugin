@@ -11,6 +11,8 @@ UPGE_InventoryComponent::UPGE_InventoryComponent()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
+
+	MaxWeight = 250.0f;
 }
 
 
@@ -23,9 +25,30 @@ void UPGE_InventoryComponent::BeginPlay()
 	
 }
 
-
-void UPGE_InventoryComponent::MergeInventoryArrays(TArray<FInventorySlot>& InSlots)
+void UPGE_InventoryComponent::MergeInventoryArrays(TArray<FInventorySlot>& InSlots, int32 Left, int32 Centre, int32 Right)
 {
+	// Calculate the sizes of the left and right subarrays
+	int32 LeftSize = Centre - Left + 1;
+	int32 RightSize = Right - Centre;
+
+	TArray<FInventorySlot> LeftArray;
+	LeftArray.SetNum(LeftSize);
+	TArray<FInventorySlot> RightArray;
+	RightArray.SetNum(RightSize);
+
+	for (int32 i = 0; i < LeftSize; i++)
+	{
+		LeftArray[i] = InSlots[Left + i];
+	}
+	for (int32 j = 0; j < RightSize; j++)
+	{
+		RightArray[j] = InSlots[Centre + 1 + j];
+	}
+
+	int32 i = 0;
+	int32 j = 0;
+	int32 k = Left;
+
 }
 
 // Called every frame
